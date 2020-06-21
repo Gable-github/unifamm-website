@@ -1,24 +1,10 @@
 $(document).ready(function(){
 
-  // if(window.pageYOffset === 0){
-  //   $(document).scroll(function(){
-  //     if(window.pageYOffset > 0){
-  //       $("nav").slideUp("fast");
-  //     } else if(window.pageYOffset === 0){
-  //       $("nav").slideDown("fast");
-  //     };
-  //   });
-  // };
-  //
-  // if(window.pageYOffset > 0){
-  //   $(window).bind('mousewheel', function(e) {
-  //     if (e.originalEvent.wheelDelta === 180) {
-  //         $("nav").slideDown("fast");
-  //     } else {
-  //         $("nav").slideUp("fast");
-  //     }
-  //   });
-  // };
+  //first method
+  $('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+  });
+
 
 
   $(document).scroll(function(event){
@@ -57,7 +43,7 @@ $(document).ready(function(){
   //animation for *about* header and para
   $(".whoAreWe-h1, .about-text").animate({
     opacity: 1
-  }, 2000);
+  }, 1000);
 
   // animation for services header
   $(document).scroll(function(){
