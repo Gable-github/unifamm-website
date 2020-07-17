@@ -1,11 +1,15 @@
 $(document).ready(function(){
 
-  //first method
   $('.navbar-collapse a').click(function(){
     $(".navbar-collapse").collapse('hide');
   });
 
+  function getVerticalScrollPercentage( elm ){
+      const p = elm.parentNode,
+          pos = (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
 
+      return pos
+  }
 
   $(document).scroll(function(event){
     if(window.pageYOffset > 840){
@@ -41,22 +45,29 @@ $(document).ready(function(){
 
 
   //animation for *about* header and para
-  $(".whoAreWe-h1, .about-text").animate({
+  $(".whoAreWe-h1, .about-text, #about-learn-more").animate({
     opacity: 1
   }, 1000);
 
   // animation for services header
   $(document).scroll(function(){
-    if(window.pageYOffset > 250){
+
+    var pos = getVerticalScrollPercentage(document.body);
+    console.log(Math.round(pos));
+
+    if(Math.round(pos) > 10){
       $(".services-h1").animate({
         opacity: 1
       }, 1000);
     };
   });
 
-  // animation for contact header
+  // animation for contact header and content below
   $(document).scroll(function(){
-    if(window.pageYOffset > 1200){
+    var pos = getVerticalScrollPercentage(document.body);
+    console.log(Math.round(pos));
+
+    if(Math.round(pos) > 60){
       $(".contact-h1").animate({
         opacity: 1
       }, 1000);

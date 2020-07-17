@@ -1,12 +1,14 @@
 html {
   scroll-behavior: smooth;
   overflow-y: scroll;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: #fefad4;
+  width: 100%;
 }
 
 p {
@@ -41,7 +43,6 @@ h2 {
 }
 img[alt="unifamm-logo"] {
   margin-bottom: 10px;
-  border-radius: 10px;
 }
 .nav-link {
   font-family: 'Montserrat', sans-serif;
@@ -67,18 +68,25 @@ img[alt="unifamm-logo"] {
   margin-bottom: 100px;
 }
 
-@media only screen and (max-width: 780px) {
+.learn-more-a {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
   /* For mobile phones */
+
   .row {
     justify-content: center;
   }
 
   .whoAreWe-h1 {
-    font-size: 4rem !important;
+    font-size: 3.7rem !important;
   }
 
   .second-container h1 {
-    font-size: 4rem !important;
+    font-size: 3.3rem !important;
   }
 
   #img-container {
@@ -100,8 +108,12 @@ img[alt="unifamm-logo"] {
   }
 
   .consultations-row {
-    background-position: 0% 300% !important;
+    background-position: 0% 100% !important;
     background-size: contain !important;
+  }
+
+  .contact-h1 {
+    font-size: 3.7rem !important;
   }
 
 }
@@ -114,8 +126,6 @@ img[alt="unifamm-logo"] {
   margin-bottom: 20px;
 }
 
-
-
 .about-container {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -127,6 +137,10 @@ img[alt="unifamm-logo"] {
   background-repeat: no-repeat;
   background-position: 100% 0%;
   background-size: contain;
+}
+
+#about-learn-more {
+  opacity: 0;
 }
 
 .about-text {
@@ -166,6 +180,7 @@ img[alt="unifamm-logo"] {
   background-image: url(images/consultations.png);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
 }
@@ -237,6 +252,10 @@ img[alt="unifamm-logo"] {
 
 #ingredientBox {
   opacity: 0;
+}
+
+.services-content a {
+  color: white;
 }
 
 /* contact section */
@@ -318,4 +337,120 @@ footer p {
   font-size: 0.5rem;
   color: #f7f7f7;
   margin: 0;
+}
+
+/* about page, excluding styles alr mentioned above */
+.about-page-container-fluid-1 {
+  background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ), url(images/epichandshake.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.page-container-1 {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  color: #f7f7f7;
+  text-align: center;
+  opacity: 0;
+}
+
+#unifamm-logo-about {
+  padding-bottom: 75px;
+}
+
+#slogan {
+  font-size: 5.4rem;
+}
+
+.about-page-container-1 p {
+  font-size: 1.3rem;
+}
+
+.about-page-container-1 img {
+  margin-bottom: 60px;
+}
+
+.about-page-row1 {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.about-page-row1 h1 {
+  font-size: 4rem;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 5px solid red;
+}
+
+.about-page-row2 {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.supplierLogos {
+  width: 70%;
+  height: 100%;
+  opacity: 0;
+}
+
+#supplierLogo3 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+
+  .about-page-container-1 {
+    text-align: left;
+  }
+
+  .about-page-row1 {
+    justify-content: flex-start;
+  }
+
+  .about-page-row1 h1 {
+    padding-left: 15px;
+  }
+
+  #slogan {
+    font-size: 2.5rem !important;
+    width: 300px;
+    display: inline-block;
+    padding-left: 50px;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  #unifamm-logo-about {
+    width: 20%;
+  }
+
+  .supplierLogos {
+    display: flex;
+    justify-content: space-between;
+    width: 120% !important;
+  }
+}
+
+/* consultations page */
+
+.consultations-container-fluid {
+  background-image: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ), url(images/4women.jpg);
+  background-position: center;
+  background-size: cover;
 }
