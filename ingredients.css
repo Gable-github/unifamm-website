@@ -1,7 +1,7 @@
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -10,6 +10,7 @@ html {
 body {
   background-color: #fefad4;
   width: 100%;
+  position: relative;
 }
 
 nav {
@@ -19,7 +20,7 @@ nav {
 h1 {
   font-family: 'utopia-std-headline', serif;
   font-weight: 400;
-  font-size: 15vh;
+  font-size: 10vw;
   font-style: normal;
 }
 
@@ -62,7 +63,7 @@ img[alt="unifamm-logo"] {
 img[alt="powder1-img"] {
   position: absolute;
   left: 0;
-  height: 100vh;
+  /* height: 100%; */
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   z-index: -1;
@@ -97,7 +98,7 @@ img[alt="powder1-img"] {
 .heading-h2 {
   font-family: 'utopia-std-headline', serif;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 5vw;
   color: #fefad4;
 }
 
@@ -220,17 +221,18 @@ img[alt="powder1-img"] {
 #questions-btn {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  height: 3rem;
+  height: 8vh;
   background-color: rgb(254,250,212);
   border: 1px solid rgb(0, 0, 0);
   transition: 0.3s;
   text-decoration: none;
   color: black;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  padding: 5vh 3vw 5vh 3vw;
+  text-align: center;
 }
 
 #questions-btn:hover {
@@ -249,4 +251,24 @@ footer p {
   color: #f7f7f7;
   margin-top: 50px;
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .ingredients-page-heading-container-fluid {
+      text-align: right;
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      object-position: left;
+      margin-bottom: 3vh;
+      opacity: 0;
+      overflow-x: hidden;
+  }
+
+  img[alt="powder1-img"] {
+    width: 80%;
+  }
+
 }
