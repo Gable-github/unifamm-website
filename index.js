@@ -1,25 +1,15 @@
 $(document).ready(function(){
 
-  // if(window.pageYOffset === 0){
-  //   $(document).scroll(function(){
-  //     if(window.pageYOffset > 0){
-  //       $("nav").slideUp("fast");
-  //     } else if(window.pageYOffset === 0){
-  //       $("nav").slideDown("fast");
-  //     };
-  //   });
-  // };
-  //
-  // if(window.pageYOffset > 0){
-  //   $(window).bind('mousewheel', function(e) {
-  //     if (e.originalEvent.wheelDelta === 180) {
-  //         $("nav").slideDown("fast");
-  //     } else {
-  //         $("nav").slideUp("fast");
-  //     }
-  //   });
-  // };
+  $('.navbar-collapse a').click(function(){
+    $(".navbar-collapse").collapse('hide');
+  });
 
+  function getVerticalScrollPercentage( elm ){
+      const p = elm.parentNode,
+          pos = (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
+
+      return pos
+  }
 
   $(document).scroll(function(event){
     if(window.pageYOffset > 840){
@@ -55,28 +45,47 @@ $(document).ready(function(){
 
 
   //animation for *about* header and para
-  $(".whoAreWe-h1, .about-text").animate({
+  $(".whoAreWe-h1, .about-text, #about-learn-more").animate({
     opacity: 1
-  }, 2000);
+  }, 1000);
 
   // animation for services header
   $(document).scroll(function(){
-    if(window.pageYOffset > 250){
+
+    var pos = getVerticalScrollPercentage(document.body);
+    console.log(Math.round(pos));
+
+    if(Math.round(pos) > 10){
       $(".services-h1").animate({
         opacity: 1
       }, 1000);
     };
   });
 
-  // animation for contact header
+  // animation for contact header and content below
   $(document).scroll(function(){
-    if(window.pageYOffset > 1200){
+    var pos = getVerticalScrollPercentage(document.body);
+    console.log(Math.round(pos));
+
+    if(Math.round(pos) > 60){
       $(".contact-h1").animate({
         opacity: 1
       }, 1000);
       $(".contact-form-div").animate({
         opacity: 1
       }, 1000)
+    };
+  });
+
+  /// When you click everywhere in the document
+  $(document).click(function (event) {
+
+  /// If *navbar-collapse* is not among targets of event
+    if (!$(event.target).is('.navbar-collapse')) {
+
+      /// Collapse every *navbar-collapse*
+      $('.navbar-collapse').collapse('hide');
+
     };
   });
 

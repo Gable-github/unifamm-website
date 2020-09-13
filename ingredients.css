@@ -1,0 +1,274 @@
+html {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fefad4;
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  background-color: #fefad4;
+}
+
+h1 {
+  font-family: 'utopia-std-headline', serif;
+  font-weight: 400;
+  font-size: 10vw;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'utopia-std-headline', serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+p, ol, ul {
+  line-height: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* navbar logo + brand + links*/
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+img[alt="unifamm-logo"] {
+  margin-bottom: 10px;
+}
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ingredients-page-heading-container-fluid {
+    text-align: right;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    object-position: left;
+    margin-bottom: 100px;
+    opacity: 0;
+}
+
+img[alt="powder1-img"] {
+  position: absolute;
+  left: 0;
+  /* height: 100%; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  z-index: -1;
+}
+
+.ingredients-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.accordion {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+  border-radius: 20px;
+}
+
+.accordion-top-heading {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.accordion-bottom-heading {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.heading-h2 {
+  font-family: 'utopia-std-headline', serif;
+  font-weight: 600;
+  font-size: 5vw;
+  color: #fefad4;
+}
+
+.card {
+  border: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.card-header {
+  background-color: #765D69;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #fefad4 !important;
+}
+
+.accordion>.card .card-header {
+    margin-bottom: 0px;
+}
+
+/* background and alignment of text in accordion */
+#texturising-content {
+    background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.7)
+    ), url(images/texturizingAgent-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15vh 7vw 15vh 7vw;
+    color: white;
+}
+#colouringAgents {
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.7)
+  ), url(images/macrons.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+#flavouringAgents {
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.7)
+  ), url(images/flavouring-background.jpg);
+  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+#foodProcessingAids {
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.7)
+  ), url(images/foodProcessingAids-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+#formulationAids {
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.4),
+  rgba(0, 0, 0, 0.5)
+  ), url(images/meatballs.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+#firmingAgents {
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.7)
+  ), url(images/burger-patty.jpg);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+#miscellaneousFoodIngredients{
+  background-image: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.7)
+  ), url(images/sausages.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -18px;
+  padding: 15vh 7vw 15vh 7vw;
+  color: white;
+}
+
+#headingLast {
+  border-bottom: 0 !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+}
+
+#questions-btn-container {
+  margin-top: 10vh;
+}
+
+#questions-btn {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(254,250,212);
+  border: 1px solid rgb(0, 0, 0);
+  transition: 0.3s;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 5vh 3vw 5vh 3vw;
+  text-align: center;
+}
+
+#questions-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(254,250,212);
+  text-decoration: none;
+}
+
+footer {
+  background-color: #765D69;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #f7f7f7;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .ingredients-page-heading-container-fluid {
+      text-align: right;
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      object-position: left;
+      margin-bottom: 3vh;
+      opacity: 0;
+      overflow-x: hidden;
+  }
+
+  img[alt="powder1-img"] {
+    width: 80%;
+  }
+
+}
